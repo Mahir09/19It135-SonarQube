@@ -8,7 +8,6 @@ pipeline {
       steps {
         withSonarQubeEnv(installationName: 'sq1') { 
           sh './mvnw clean install'
-          sh './mvnw sonar:sonar -Dsonar.login=myAuthenticationToken'
         }
       }
     }
